@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Facebook Ad Remover</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Facebook Ad Remover</h1>
+
+  <fieldset class="modes">
+    <legend>Mode</legend>
+    <label><input type="radio" name="mode" value="off"><span>Off</span></label>
+    <label><input type="radio" name="mode" value="grey"><span>Grey out</span></label>
+    <label><input type="radio" name="mode" value="hide"><span>Hide</span></label>
+  </fieldset>
+
+  <p class="hint" id="hint"></p>
+
+  <dl class="stats" id="stats">
+    <div><dt>Feed ads</dt><dd id="feed">–</dd></div>
+    <div><dt>Sidebar</dt><dd id="sidebar">–</dd></div>
+    <div><dt>Marketplace</dt><dd id="marketplace">–</dd></div>
+    <div><dt>Reels</dt><dd id="reel">–</dd></div>
+  </dl>
+
+  <script src="popup.js"></script>
+</body>
+</html>

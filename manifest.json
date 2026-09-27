@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook Ad Remover",
+  "version": "0.1.0",
+  "description": "Greys out or hides Sponsored posts and the Sponsored sidebar on Facebook.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.facebook.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_title": "Facebook Ad Remover",
+    "default_popup": "popup.html"
+  }
+}

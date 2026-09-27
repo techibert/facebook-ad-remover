@@ -1,0 +1,39 @@
+/* Ads are tagged with data-far-ad by content.js; the mode lives on <html data-far-mode>. */
+
+html[data-far-mode="grey"] [data-far-ad] {
+  opacity: 0.25 !important;
+  filter: grayscale(1) !important;
+  pointer-events: none !important;
+  outline: 2px dashed #e11d48 !important;
+  outline-offset: -2px !important;
+}
+
+html[data-far-mode="hide"] [data-far-ad]:not([data-far-ad="reel"]) {
+  display: none !important;
+}
+
+/* Reels keep their slot so Facebook's Previous/Next navigation stays aligned;
+   content.js skips past them. */
+html[data-far-mode="hide"] [data-far-ad="reel"] {
+  visibility: hidden !important;
+}
+
+.far-toast {
+  position: fixed;
+  z-index: 2147483647;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25), 0 4px 16px rgba(0, 0, 0, 0.4);
+  font: 600 15px/1.2 system-ui, -apple-system, sans-serif;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.96);
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.far-toast--show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}

@@ -1,0 +1,5 @@
+node_modules/
+dev/*.png
+.vscode/
+.DS_Store
+CLAUDE.md
